@@ -3,6 +3,8 @@
 import pygame
 import random
 
+#     font1 = pygame.font.Font(None, 24)
+# print_text(scr, font1, 0, 0, "live:" + str(lives))
 
 def print_text(scr, font, x, y, text, color=(250, 25, 255)):
     imgText = font.render(text, True, color)
