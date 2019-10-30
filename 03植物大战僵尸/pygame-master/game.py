@@ -1,4 +1,14 @@
-
+# 开发思路
+# 1.引入需要的模块，配置图片路径，设置界面宽高背景颜色，创建游戏主入口。
+# 2.文本绘制，创建要动态改变的属性，渲染的位置
+# 3.创建地图类，初始化地图和坐标
+# 4.创建植物类，图片加载报错处理，加载植物方法
+# 5.创建向日葵类
+# 6.创建豌豆射手类
+# 7.创建子弹类
+# 8.事件处理
+# 9.创建僵尸类
+# 10.游戏结束方法
 # -*- coding: utf-8 -*-
 #1 引入需要的模块
 import pygame
@@ -147,7 +157,7 @@ class Zombie(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
-        self.hp = 1000000000000
+        self.hp = 1000
         self.damage = 2
         self.speed = 1
         self.live = True
@@ -192,7 +202,7 @@ class MainGame():
     shaoguan = 1
     score = 0
     remnant_score = 100
-    money = 20000000000
+    money = 2200000000000
     #3 存储所有地图坐标点
     map_points_list = []
     #3 存储所有的地图块
@@ -215,7 +225,7 @@ class MainGame():
     #2 文本绘制
     def draw_text(self, content, size, color):
         pygame.font.init()
-        font = pygame.font.SysFont('Arial.ttf', size)
+        font = pygame.font.SysFont('ziti.ttf', size)
         text = font.render(content, True, color)
         return text
 

@@ -8,7 +8,7 @@ pygame.display.set_caption("BALL")           #设置窗口名称
 # ball_x = 0
 # ball_y = 100
 rect_x, rect_y, rect_w, rect_h = 300, 460, 120, 40 #小挡板的坐标和宽高
-ball_x, ball_y = random.randint(0, 500), -50 #让小球从一个上面随机的位置出现
+ball_x, ball_y = random.randint(0, 500), -50 #让小球从一个上面随pyga机的位置出现
 
 # pygame.mixer.init()
 # pygame.mixer.music.load("bg_music.mp3")          # Load background music

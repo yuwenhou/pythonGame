@@ -56,7 +56,7 @@ bye.set_volume(0.6)                                 #
 screen = pygame.display.set_mode([640,480]) 
 clock = pygame.time.Clock() 
 
-myBall = MyBallClass('wackyball.bmp', [12,6], [50, 50]) 
+myBall = MyBallClass('ball.bmp', [12,6], [50, 50])
 ballGroup = pygame.sprite.Group(myBall) 
 paddle = MyPaddleClass([270, 400]) 
 lives = 3 

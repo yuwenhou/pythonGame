@@ -15,7 +15,7 @@ pygame.init()  # init 初始化
 screen = pygame.display.set_mode((600, 500))  # screen-size 窗口大小设置
 pygame.display.set_caption('BallFall')  # title 窗口标题
 font1 = pygame.font.Font('ziti.ttf', 24)  # font,size 字体类型（None为pygame默认字体）.字体大小
-pygame.mouse.set_visible(False)  # mouse-visible 光标可视
+pygame.mouse.set_visible(True)  # mouse-visible 光标可视
 
 # 颜色设置
 white = 255, 255, 255  # rgb

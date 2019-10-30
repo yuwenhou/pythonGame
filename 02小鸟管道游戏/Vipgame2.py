@@ -112,7 +112,7 @@ if __name__ == '__main__':
     """主程序"""
     pygame.init()                            # 初始化pygame
     pygame.font.init()                       # 初始化字体
-    font = pygame.font.SysFont("Arial", 50)  # 设置字体和大小
+    font = pygame.font.SysFont("ziti.ttf", 50)  # 设置字体和大小
     size = width, height = 400, 650          # 设置窗口
     screen = pygame.display.set_mode(size)   # 显示窗口
     clock = pygame.time.Clock()              # 设置时钟
