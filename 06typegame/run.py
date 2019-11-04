@@ -1,13 +1,13 @@
 import pygame
 from pygame.locals import *
-from captions import Caption
+from title import Title
 from setting import InputData
 import sys
 import time
-from music import runMusic
+from bgmusic import RunMusic
 
 
-class Game():
+class Game(object):
     '''
     图形用户界面
     '''
@@ -21,10 +21,10 @@ class Game():
         self.background = pygame.Surface(self.screenRect.size).convert()
         self.elements = pygame.sprite.RenderUpdates()
         self.inputData = InputData(textSource)
-        self.music = runMusic()
-        self.caption = Caption()
+        self.music = RunMusic()
+        self.title = Title()
         self.game_over = True
-        self.elements.add(self.caption)
+        self.elements.add(self.title)
         self.background.fill((255, 255, 255))
         self.screen.blit(self.background, (0, 0))
 
@@ -53,14 +53,14 @@ class Game():
             if self.game_over:
                 cover = self.inputData.getCover()
                 self.screen.blit(cover, (0, 0))
-                self.caption.print_text(self.screen, 10, 400, self.coverText, (232, 206, 144))
+                self.title.print_text(self.screen, 10, 400, self.coverText, (232, 206, 144))
 
             else:
                 typingSpeed = self.inputData.getSpeed()
                 words = self.inputData.getWords()
                 corrWords = self.inputData.getCorrWords()
                 countDown = 60 - (time.time() - startTime)
-                self.caption.setText(typingSpeed, words, corrWords, countDown)
+                self.title.setText(typingSpeed, words, corrWords, countDown)
 
                 # 根据打字速度改变背景颜色
                 if typingSpeed > self.speedLimit:
@@ -81,7 +81,7 @@ class Game():
 
 
 def main():
-    dataFile = 'files/speed.txt'
+    dataFile = 'files/type.txt'
     pygame.init()
     g = Game(dataFile)
     g.start()

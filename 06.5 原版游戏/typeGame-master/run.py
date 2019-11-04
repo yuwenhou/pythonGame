@@ -62,7 +62,7 @@ def main():
     parser = argparse.ArgumentParser(description="Typing exercice.")
     parser.add_argument('--f',
                         help="path for the text you would like to type",
-                        default='files/speed.txt')
+                        default='files/type.txt')
     args = parser.parse_args()
 
     pygame.init()

@@ -6,7 +6,7 @@
 import re
 
 
-class Text():
+class Text(object):
     '''
     从文件产生文本
     numWords: 每次出现的单词数量

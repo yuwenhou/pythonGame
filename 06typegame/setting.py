@@ -8,7 +8,7 @@ import pygame
 from text import Text
 
 
-class InputData():
+class InputData(object):
     '''
     输入的动画显示
     '''

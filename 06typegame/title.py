@@ -5,7 +5,7 @@
 import pygame
 
 
-class Caption(pygame.sprite.Sprite):
+class Title(pygame.sprite.Sprite):
     '''
     实时显示打字性能
     '''
